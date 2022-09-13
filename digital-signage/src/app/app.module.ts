@@ -9,6 +9,7 @@ import { FormHolderComponent } from './form-holder/form-holder.component';
 import { UploadsModule } from './uploads/uploads.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ConfigComponent } from './config/config.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ConfigComponent } from './config/config.component';
     AppRoutingModule,
     NgbModule,
     UploadsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

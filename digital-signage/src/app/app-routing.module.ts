@@ -7,7 +7,7 @@ import { UploadsComponent } from './uploads/uploads/uploads.component';
 
 const routes: Routes = [
   { path: 'form', component: FormHolderComponent },
-  { path: 'carrousal', component: CarrousalComponent },
+  { path: 'carousel', component: CarrousalComponent },
   { path: 'uploads', component: UploadsComponent },
   { path: 'config', component: ConfigComponent },
   { path: '', redirectTo: '/form', pathMatch: 'full' }

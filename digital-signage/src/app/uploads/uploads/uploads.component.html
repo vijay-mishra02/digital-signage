@@ -1,12 +1,8 @@
 <div class="bg-light">  
     <div class="container"> 
         <div class="card m-4">
-            <div class="card-body">
-                <app-upload></app-upload>
-                <app-upload></app-upload>
-                <app-upload></app-upload>
-                <app-upload></app-upload>
-                <app-upload></app-upload>
+            <div class="card-body" *ngFor="let item of items | keyvalue">
+                <app-upload [item]="item.value">{{item.key}}</app-upload>
             </div>
         </div>
     </div>

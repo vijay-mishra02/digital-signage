@@ -5,27 +5,10 @@
                 <div class="card">
                     <div class="card-body">
                         <form>
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1">
-                            </div>
-                            <div class="mb-3 form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                            </div>
-                            <div class="mb-3">
-                                <label for="formFile" class="form-label"> Please Select File:</label>
-                                <input class="form-control" type="file" id="upload-doc" accept=".pdf"  (change)="uploadFile($event)">
-                            </div>
                             <div class="input-group mb-3">
-                                <input type="file" class="form-control" id="inputGroupFile02">
-                                <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                                <input type="file" class="form-control"  (change)="onChange($event)" id="inputGroupFile02">
+                                <label class="input-group-text" (click)="onUpload()" for="inputGroupFile02">Upload</label>
                             </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
                             <!-- <pdf-viewer [src]="pdfSrc" [render-text]="true" [page]="currentpage"  [show-all]="false" [original-size]="true" [fit-to-page]="false" (after-load-complete)="afterLoadComplete($event)" style="display block;"></pdf-viewer> -->
                         </form>
                     </div>      
@@ -36,7 +19,7 @@
                     <div class="card-body">
                         <div class="card">
                             <div class="card-body">
-                                <img class="card-img-top" src="https://indiannavy.nic.in/sites/default/themes/indiannavy/images/in-logo.jpg" alt="Card image cap">
+                                <img class="card-img-top" [src]="imageUrl" alt="Card image cap">
                                 <div class="card-body">
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 </div>
