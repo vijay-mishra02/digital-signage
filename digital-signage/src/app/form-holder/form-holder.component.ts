@@ -37,7 +37,7 @@ export class FormHolderComponent implements OnInit {
     this.loading = !this.loading;
     this.formHolderService.upload(this.file).subscribe((data=>{
       console.log(data)
-      this.imageUrl = "http://localhost:8080/files/downloadById/"+ data.response;
+      this.imageUrl = "http://localhost:8080/files/download/"+ data.response;
       console.log(this.imagePath)
       })
     );
